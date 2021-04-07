@@ -1,0 +1,37 @@
+[
+  {
+    "email": "tester",
+    "password": "c38fa2fe781e5ddb55e0ea2980e531bdffdaa25ca39fd4c8e276e3b69bd56a14cb002a9bfbe54a4d3b8833c99eb4f4dfacf2fb731603c4dac7345ee785aa8f71.de93f4cacab5434a",
+    "id": "405d83cc"
+  },
+  {
+    "email": "test",
+    "password": "43e256dc40d0894297316ac71795f5d88c6a6544301051c35539a21b7c512e726e9e22066de3ddaaf7a1d98966dfbb1fc2f61cb6b6a24bbf3a5da8646269ed6d.385249d4db5c6b8c",
+    "id": "a207a58a"
+  },
+  {
+    "email": "@dfe",
+    "password": "c88cb580c3f3240b46ccbb3c44922b9567c658231cfa73a63e12f2d164fb3d3c4edd1fc43c46b31470ea7305b8836306f11d63fe526ae47c3f14ef0a8409c952.3a3cb549522d974e",
+    "id": "dc58004d"
+  },
+  {
+    "email": "@er",
+    "password": "e941d4be99c14852008b077ca7dd5ede4368fe0e2103e8cfe6ec03544fe21fe18a48d899e8c4349efd0e58a5d72311aa7f39e664cc9ca136ee48181b3053a19f.2f385fae3d659cf0",
+    "id": "f9110aa6"
+  },
+  {
+    "email": "@test",
+    "password": "f240ef0d1aac506271b6c26b6d7c9663e52128a6b55fe2ab2bb386cde1d2c75f4a5e20912046c6932ef5631ab0bcc557b0d591647ef529f86e6ae755ee7826da.0f2bb3d9ee0589e0",
+    "id": "7e4445dd"
+  },
+  {
+    "email": "test@test.de",
+    "password": "7aee2ddd5f3aa5d34867308e45eb6ffd5afcf4bdc6f1611560da46a108cc7f91525b49af1006c4d0e108f730b53e19e6d6a3ff173881c30e7259ed37dbbd4f62.623d0c10e58d109c",
+    "id": "06c878f9"
+  },
+  {
+    "email": "test1@test.de",
+    "password": "04c769614c8548238bae83136f8e6fe0b7f77f2fcbc49f39c64057c357b8a40b37e737468df7135768a76afe8badc07ce9318ca7207c152818fe939b222dcea6.9d2f9cb39b88465d",
+    "id": "56859329"
+  }
+]
