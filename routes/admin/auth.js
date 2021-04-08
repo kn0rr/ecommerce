@@ -1,10 +1,12 @@
 
 const express = require('express');
+
 const usersRepo=require('../../repositories/users');
 const signupTemplate= require('../../views/admin/auth/signup');
 const signinTemplate= require('../../views/admin/auth/signin');
-const {check, validationResult}= require('express-validator');
+const{handleErrors}=require('./middlewares');
 const {requireEmail,requirePassword,requirePasswordConfirmation,requireEmailExists,requireValidPassword}=require('./validators');
+
 const router=express.Router();
 
 //route handler
@@ -41,18 +43,10 @@ router.post('/signup',[
     requireEmail,
     requirePassword,
     requirePasswordConfirmation
-] ,async (req,res)=>{
-    // save output of the validationResult, which represents errors during validation 
-    const errors=validationResult(req);
-    //console.log(errors)
+] ,handleErrors(signupTemplate),async (req,res)=>{
+    
 
-   console.log(req.body);
-    //Check if we got any errors while signup, e.g. by requireEmail
-   if (!errors.isEmpty()) {
-       return res.send(signupTemplate({req,errors}));
-   }
-
-   const {email,password,passwordConfirmation}=req.body
+   const {email,password}=req.body
 
 
    //Create a user in our user repo to represent this person
@@ -62,7 +56,8 @@ router.post('/signup',[
    req.session.userId = user.id;// Added by cookie session
 
 
-    res.send('Account created');
+    //res.send('Account created');
+    res.redirect('/admin/products');
 });
 
 router.get('/signout', (req,res)=>{
@@ -119,19 +114,14 @@ router.post('/signin',[
 router.post('/signin',[
     requireEmailExists,
     requireValidPassword
-], async(req,res)=>{
-    const errors=validationResult(req);
-   // console.log(errors);
-   if(!errors.isEmpty()){
-       return res.send(signinTemplate({errors}));
-   }
+],handleErrors(signinTemplate), async(req,res)=>{
     const {email}=req.body;
 
     const user= await usersRepo.getOneBy({email});
 
     req.session.userId=user.id;
-    res.send('You are singend in ');
-
+    //res.send('You are singend in ');
+    res.redirect('/admin/products');
 });
 
 module.exports=router;
